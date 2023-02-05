@@ -4,7 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/fir
 
 const htmlContent = `
     <section class="header">
-        <h2 class="title">SGS DCC</h2>
+        <h2 class="title">SGS Lab</h2>
         <p>
             SGS Document Change Controller
         </p>
