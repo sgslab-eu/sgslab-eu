@@ -111,7 +111,7 @@ function renderData(data) {
     $('#page_id').val(data['page_id']);
     $('#product_name').val(data['product_name']);
     $('#ma_renewal_date').val(data['ma_renewal_date']);
-    $('#packe_size').val(data['pack_size']);
+    $('#pack_size').val(data['pack_size']);
     $('#stability').val(data['stability']);
     $('#storage_conditions').val(data['storage_conditions']);
     $('#country').val(data['country']);
