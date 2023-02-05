@@ -108,16 +108,24 @@ function getData(doc_id, baseUrl, token){
 }
 
 function renderData(data) {
-    $('#result').text(JSON.stringify(data,null,2));
+    $('#page_id').val(data['page_id']);
     $('#product_name').val(data['product_name']);
-    $('#desc').val(data['desc']);
+    $('#ma_renewal_date').val(data['ma_renewal_date']);
     $('#packe_size').val(data['pack_size']);
+    $('#stability').val(data['stability']);
+    $('#storage_conditions').val(data['storage_conditions']);
+    $('#country').val(data['country']);
+    $('#procedure_number').val(data['procedure_number']);
+    $('#ma_number').val(data['ma_number']);
+    $('#ma_grant_date').val(data['ma_grant_date']);
+    $('#desc').val(data['desc']);
     $('#remarks').val(data['remarks']);
     let s = '';
     for (let val of data['file_list']) {
         s = `${s} <b>${val['type']}</b>: ${val['name']}<br>`;
     }
     $('#file_list').html(s);
+    $('#result').text(JSON.stringify(data,null,2));
 }
 
 export {htmlContent, initialize, signin, getData, getToken, renderData};
