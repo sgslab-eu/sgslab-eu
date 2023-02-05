@@ -108,7 +108,6 @@ function getData(doc_id, baseUrl, token){
 }
 
 function renderData(data) {
-    $('#page_id').val(data['page_id']);
     $('#product_name').val(data['product_name']);
     $('#ma_renewal_date').val(data['ma_renewal_date']);
     $('#pack_size').val(data['pack_size']);
