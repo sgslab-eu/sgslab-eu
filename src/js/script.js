@@ -100,8 +100,7 @@ function configIssueCollector(colloectorUrl, window, page_id, spaceKey, data) {
                     summary : 'Change request for ' + data['product_name'],
                     customfield_10195 : data['page_id'],
                     customfield_10194 : data['spaceKey'],
-                    customfield_10067 : data['product_name'],
-                    customfield_10205 : data['pack_size']
+                    
                 }
             }
         ,
