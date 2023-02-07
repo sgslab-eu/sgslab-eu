@@ -55,7 +55,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     $('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
     $('#data').text(JSON.stringify( data, null, 2));
 
-    await configIssueCollector(config['issueCollector'], window, data);
+    await configIssueCollector(config['issueCollector'], window, page_id, spaceKey, data);
 
     $('#result').html('<b>OK:</b> data fetched correctly'); 
 
@@ -82,7 +82,7 @@ function getData(page_id, spaceKey, baseUrl, token){
     .catch( (error) => {throw error} );
 }
 
-function configIssueCollector(colloectorUrl, window, data) {
+function configIssueCollector(colloectorUrl, window, page_id, spaceKey, data) {
     $.ajax({
         url: colloectorUrl, 
         type: 'GET',
@@ -98,8 +98,8 @@ function configIssueCollector(colloectorUrl, window, data) {
                 },
                 fieldValues: {
                     summary : 'Change request for ' + data['product_name'],
-                    customfield_10195 : data['page_id'],
-                    customfield_10194 : data['spaceKey'],
+                    customfield_10195 : page_id,
+                    customfield_10194 : spaceKey,
                     customfield_10067 : data['product_name'],
                     customfield_10205 : data['pack_size'],
                     customfield_10204 : data['procedure_number'],
@@ -107,7 +107,7 @@ function configIssueCollector(colloectorUrl, window, data) {
                     customfield_10202 : data['ma_grant_date'],
                     customfield_10203 : data['ma_renewal_date'],
                     customfield_10208 : 'page_link',
-                    customfield_10200 : 'attached_files',
+                    customfield_10200 : 'attached_files'
                 }
             }
         ,
