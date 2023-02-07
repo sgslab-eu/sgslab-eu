@@ -55,7 +55,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     $('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
     $('#data').text(JSON.stringify( data, null, 2));
 
-    await configIssueCollector(config['issueCollector'], window, page_id, spaceKey, data);
+    await configIssueCollector(config['issueCollector'], window, data);
 
     $('#result').html('<b>OK:</b> data fetched correctly'); 
 
@@ -82,7 +82,7 @@ function getData(page_id, spaceKey, baseUrl, token){
     .catch( (error) => {throw error} );
 }
 
-function configIssueCollector(colloectorUrl, window, page_id, spaceKey, data) {
+function configIssueCollector(colloectorUrl, window, data) {
     $.ajax({
         url: colloectorUrl, 
         type: 'GET',
@@ -97,9 +97,7 @@ function configIssueCollector(colloectorUrl, window, page_id, spaceKey, data) {
                     });
                 },
                 fieldValues: {
-                    summary : 'Change request for ' + data['product_name'],
-                    customfield_10195 : data['page_id'],
-                    customfield_10194 : data['spaceKey'],
+                    summary : 'Change request for ' + data['product_name']
                     
                 }
             }
