@@ -53,6 +53,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     }
     $('#file_list').html(s);
     data['file_names'] = f.toString();
+    $('#remarks').val(data['file_names']);
     $('#result').text(JSON.stringify(data,null,2));
     $('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
     $('#data').text(JSON.stringify( data, null, 2));
@@ -108,7 +109,7 @@ function configIssueCollector(colloectorUrl, window, data) {
                     customfield_10201 : data['ma_number'],
                     customfield_10202 : data['ma_grant_date'],
                     customfield_10203 : data['ma_renewal_date'],
-                    customfield_10208 : `https://sgslab.atlassian.net/wiki/spaces/${spaceKey}/pages/${data['page_id']}`,
+                    customfield_10208 : 'https://sgslab.atlassian.net/wiki/spaces/' + data['spaceKey'] + '/pages/' + data['page_id'],
                     customfield_10200 : data['file_names']     
                 }
             }
