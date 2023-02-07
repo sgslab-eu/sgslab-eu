@@ -109,7 +109,7 @@ function configIssueCollector(colloectorUrl, window, data) {
                     customfield_10202 : data['ma_grant_date'],
                     customfield_10203 : data['ma_renewal_date'],
                     customfield_10208 : `https://sgslab.atlassian.net/wiki/spaces/${spaceKey}/pages/${data['page_id']}`,
-                    customfield_10200 : JSON.stringify(data['file_names']).replace('[','').replace(']','')      
+                    customfield_10200 : JSON.stringify(data['file_names'])      
                 }
             }
         ,
