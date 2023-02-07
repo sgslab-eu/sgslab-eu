@@ -97,7 +97,17 @@ function configIssueCollector(colloectorUrl, window, data) {
                     });
                 },
                 fieldValues: {
-                    summary : 'Change request for ' + data['product_name']
+                    summary : 'Change request for ' + data['product_name'],
+                    customfield_10195 : data['page_id'],
+                    customfield_10194 : data['spaceKey'],
+                    customfield_10067 : data['product_name'],
+                    customfield_10205 : data['pack_size'],
+                    customfield_10204 : data['procedure_number'],
+                    customfield_10201 : data['ma_number'],
+                    customfield_10202 : data['ma_grant_date'],
+                    customfield_10203 : data['ma_renewal_date'],
+                    customfield_10208 : 'page_link',
+                    customfield_10200 : 'attached_files'
                     
                 }
             }
