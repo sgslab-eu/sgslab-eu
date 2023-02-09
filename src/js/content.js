@@ -58,7 +58,7 @@ const htmlContent = `
         </div>
     </div>
 
-    <div class="page-section">
+    <div class="page-section"  style="display: none">
         <h3>Current Login</h3>
         <pre><code id="user" style="overflow: scroll; display: none"></code></pre>
         <h3>Data</h3>
