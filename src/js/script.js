@@ -53,7 +53,6 @@ async function renderPage(config, page_id, spaceKey, window) {
     }
     $('#file_list').html(s);
     data['file_names'] = f.toString();
-    $('#remarks').val(data['file_names']);
     $('#result').text(JSON.stringify(data,null,2));
     $('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
     $('#data').text(JSON.stringify( data, null, 2));

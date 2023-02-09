@@ -60,11 +60,11 @@ const htmlContent = `
 
     <div class="page-section">
         <h3>Current Login</h3>
-        <pre><code id="user" style="overflow: scroll;"></code></pre>
+        <pre><code id="user" style="overflow: scroll; display: none"></code></pre>
         <h3>Data</h3>
-        <pre><code id="data" style="overflow: scroll;"></code></pre>
+        <pre><code id="data" style="overflow: scroll; display: none"></code></pre>
         <h3>Result</h3>
-        <pre><code id="result" style="overflow: scroll;"></code></pre>
+        <pre><code id="result" style="overflow: scroll; display: none"></code></pre>
     </div>`;
 
     export {htmlContent};
