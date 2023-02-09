@@ -24,13 +24,13 @@ function getToken(userCredentials){
 async function renderPage(config, page_id, spaceKey, window) {
 
     const auth = await initialize(config['firebase']);
-    $('#result').html(`<b>Done:</b> initialization...`) ;
+    //$('#result').html(`<b>Done:</b> initialization...`) ;
     
     const credentials = await signin(auth, config['signin']['username'], config['signin']['password']);
-    $('#result').html(`<b>Done:</b> fetched credentials...`) ;
+    //$('#result').html(`<b>Done:</b> fetched credentials...`) ;
     
     const token = await getToken(credentials);
-    $('#result').html(`<b>Done:</b> fetched token...`) ;
+    //$('#result').html(`<b>Done:</b> fetched token...`) ;
 
     const data = await getData(page_id, spaceKey, config['firebase']['databaseURL'], token );
             
@@ -53,13 +53,13 @@ async function renderPage(config, page_id, spaceKey, window) {
     }
     $('#file_list').html(s);
     data['file_names'] = f.toString();
-    $('#result').text(JSON.stringify(data,null,2));
-    $('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
-    $('#data').text(JSON.stringify( data, null, 2));
+
+    //$('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
+    //$('#data').text(JSON.stringify( data, null, 2));
 
     await configIssueCollector(config['issueCollector'], window, data);
 
-    $('#result').html('<b>OK:</b> data fetched correctly'); 
+    //$('#result').html('<b>OK:</b> data fetched correctly'); 
 
 }
 
