@@ -24,13 +24,10 @@ function getToken(userCredentials){
 async function renderPage(config, page_id, spaceKey, window) {
 
     const auth = await initialize(config['firebase']);
-    //$('#result').html(`<b>Done:</b> initialization...`) ;
-    
+
     const credentials = await signin(auth, config['signin']['username'], config['signin']['password']);
-    //$('#result').html(`<b>Done:</b> fetched credentials...`) ;
     
     const token = await getToken(credentials);
-    //$('#result').html(`<b>Done:</b> fetched token...`) ;
 
     const data = await getData(page_id, spaceKey, config['firebase']['databaseURL'], token );
             
@@ -54,13 +51,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     $('#file_list').html(s);
     data['file_names'] = f.toString();
 
-    //$('#user').text(JSON.stringify( {uid: credentials.user.uid, email: credentials.user.email}, null, 2));
-    //$('#data').text(JSON.stringify( data, null, 2));
-
     await configIssueCollector(config['issueCollector'], window, data);
-
-    //$('#result').html('<b>OK:</b> data fetched correctly'); 
-
 }
 
 function getData(page_id, spaceKey, baseUrl, token){
@@ -103,9 +94,9 @@ function configIssueCollector(colloectorUrl, window, data) {
                     customfield_10195 : data['page_id'],
                     customfield_10194 : data['spaceKey'],
                     customfield_10067 : data['product_name'],
-                    customfield_10205 : data['pack_size'],
+                    customfield_10209 : data['pack_size'],
                     customfield_10204 : data['procedure_number'],
-                    customfield_10201 : data['ma_number'],
+                    customfield_10210 : data['ma_number'],
                     customfield_10202 : data['ma_grant_date'],
                     customfield_10203 : data['ma_renewal_date'],
                     customfield_10208 : 'https://sgslab.atlassian.net/wiki/spaces/' + data['spaceKey'] + '/pages/' + data['page_id'],
