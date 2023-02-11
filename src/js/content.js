@@ -58,7 +58,7 @@ const htmlContent = `
             <pre><code id="file_list" style="background-color:white; padding: 20px;"></code></pre>
             
             <div style="width: 100%; display: flex; align-items: flex-end; flex-direction: column;">
-                <input id="change" class="button-primary" type="button" style="width: 180px;" disabled value="Change Request" />
+                <input id="change" class="button-primary" type="button" style="width: 180px;" value="Change Request" />
             </div>
         </div>
     </div>
