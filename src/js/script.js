@@ -30,7 +30,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     const token = await getToken(credentials);
 
     const data = await getData(page_id, spaceKey, config['firebase']['databaseURL'], token );
-            
+
     $('#product_name').val(data['product_name']);
     $('#desc').val(data['desc']);
     $('#pack_size').val(data['pack_size']);
