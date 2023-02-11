@@ -1,2 +1,6 @@
-<p>Hello, world!</p><ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="b1298625-64bf-42e8-b3bc-e3489526e9bc"><ac:rich-text-body>
-<p>This is an info panel</p></ac:rich-text-body></ac:structured-macro>
+<p>Gupta Bhai</p>
+<ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="b1298625-64bf-42e8-b3bc-e3489526e9bc">
+    <ac:rich-text-body>
+        <p>Tarique Mehmood</p>
+    </ac:rich-text-body>
+</ac:structured-macro>
