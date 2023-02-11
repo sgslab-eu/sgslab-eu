@@ -1,0 +1,30 @@
+{
+    "key": "eu.sgslab.changecontrol",
+    "name": "SGS Lab Change Control",
+    "description": "Custom macro to render document detail from firebase",
+    "baseUrl": "https://sgslab-eu.github.io/sgslab-eu/jira-macros/",
+    "vendor": {
+        "name": "SGS Lab",
+        "url": "https://sgslab-eu.github.io/sgslab-eu/"
+    },
+    "authentication": {
+        "type": "none"
+    },
+    "modules": {
+        "staticContentMacros": [
+            {
+                "url": "/macro.xml",
+                "outputType": "inline",
+                "icon": {
+                    "width": 80,
+                    "height": 80,
+                    "url": "/icon.png"
+                },
+                "key": "document-change-control",
+                "name": {
+                    "value": "Document Change Control"
+                }
+            }
+        ]
+    }
+}
