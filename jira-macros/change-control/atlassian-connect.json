@@ -2,7 +2,7 @@
     "key": "eu.sgslab.changecontrol",
     "name": "SGS Lab Change Control",
     "description": "Custom macro to render document detail from firebase",
-    "baseUrl": "https://sgslab-eu.github.io/sgslab-eu/jira-macros/",
+    "baseUrl": "https://sgslab-eu.github.io/sgslab-eu/jira-macros/change-control/",
     "vendor": {
         "name": "SGS Lab",
         "url": "https://sgslab-eu.github.io/sgslab-eu/"
