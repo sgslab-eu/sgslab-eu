@@ -46,7 +46,7 @@ async function renderPage(config, page_id, spaceKey, window) {
     let f = [];
     const downloadUrl = 'https://sgslab.atlassian.net/wiki/download/attachments/' + page_id
     for (let val of data['file_list']) {
-        s = `${s} <b>${val['type']}</b>: <a href="${downloadUrl}/${val['name']}?api=v2">${val['name']}</a><br>`
+        s = `${s} <b>${val['type']}</b>: <a href="${downloadUrl}/${val['name']}">${val['name']}</a><br>`
         f.push(val['name']);
     }
     $('#file_list').html(s);
