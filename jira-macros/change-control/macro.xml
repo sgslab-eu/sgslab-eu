@@ -1,15 +1,20 @@
-<p>Gupta Bhai</p>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css">
+<link rel="stylesheet" href="https://sgslab-eu.github.io/sgslab-eu/src/css/style.css" type="text/css">
+
 <ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="b1298625-64bf-42e8-b3bc-e3489526e9bc">
     <ac:rich-text-body>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css">
-        <link rel="stylesheet" href="https://sgslab-eu.github.io/sgslab-eu/src/css/style.css" type="text/css">
 
         <div id="container" class="container">
         </div> 
 
-        <script src="https://connect-cdn.atl-paas.net/all.js"></script>
-        <script type="module" crossorigin="anonymous">
+    </ac:rich-text-body>
+</ac:structured-macro>
+
+
+<script src="https://connect-cdn.atl-paas.net/all.js"></script>
+<script type="module" crossorigin="anonymous">
             import {renderPage} from 'https://sgslab-eu.github.io/sgslab-eu/src/js/script.js'
             import {htmlContent, adminAccounts} from 'https://sgslab-eu.github.io/sgslab-eu/src/js/content.js'
             
@@ -64,6 +69,4 @@
                     
                 }            
             });
-                    </script>
-    </ac:rich-text-body>
-</ac:structured-macro>
+</script>
