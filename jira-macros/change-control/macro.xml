@@ -36,9 +36,9 @@
             };
             
 
-            $( async () => {
+            AJS.$( async () => {
                 try {
-                    $('#container').html(htmlContent);
+                    AJS.$('#container').html(htmlContent);
 
                     AP.user.getCurrentUser(function(user) {
                         if(adminAccounts.includes(user.atlassianAccountId)){
@@ -52,7 +52,7 @@
                             const page_id = context_data.confluence.content.id;
                             const spaceKey = context_data.confluence.space.key;
 
-                            $('#page_id').val(page_id);
+                            AJS.$('#page_id').val(page_id);
                             
                             await renderPage(config, page_id, spaceKey, window )
             
@@ -61,10 +61,10 @@
                 } catch(error) {
                     try{
                         let json = $.parseJSON(msg);
-                        $('#result').html(`<b>Error:</b> ` + JSON.stringify( error, null, 2)) ;
+                        AJS.$('#result').html(`<b>Error:</b> ` + JSON.stringify( error, null, 2)) ;
                     }
                     catch(err){
-                        $('#result').html(`<b>Error:</b> ` +  error) ;
+                        AJS.$('#result').html(`<b>Error:</b> ` +  error) ;
                     } 
                     
                 }            
