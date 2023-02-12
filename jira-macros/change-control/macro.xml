@@ -9,10 +9,5 @@
 </ac:structured-macro>
 
 
-<script type="module" crossorigin="anonymous">
-            
+AJS.$('#container').html('<b>Hello world</b>');
 
-
-                    AJS.$('#container').html('<b>Hello world</b>');
-
-</script>
