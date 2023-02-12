@@ -3,11 +3,9 @@
     <ac:rich-text-body>
 
         <div id="container" class="container">
+            HELLO WORLD
         </div> 
 
     </ac:rich-text-body>
 </ac:structured-macro>
-
-
-AJS.$('#container').html('<b>Hello world</b>');
 
