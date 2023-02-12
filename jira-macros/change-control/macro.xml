@@ -1,8 +1,4 @@
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" type="text/css">
-<link rel="stylesheet" href="https://sgslab-eu.github.io/sgslab-eu/src/css/style.css" type="text/css">
-
 <ac:structured-macro ac:name="info" ac:schema-version="1" ac:macro-id="b1298625-64bf-42e8-b3bc-e3489526e9bc">
     <ac:rich-text-body>
 
@@ -13,60 +9,10 @@
 </ac:structured-macro>
 
 
-<script src="https://connect-cdn.atl-paas.net/all.js"></script>
 <script type="module" crossorigin="anonymous">
-            import {renderPage} from 'https://sgslab-eu.github.io/sgslab-eu/src/js/script.js'
-            import {htmlContent, adminAccounts} from 'https://sgslab-eu.github.io/sgslab-eu/src/js/content.js'
-            
-            const config = {
-                firebase : {
-                    apiKey: "AIzaSyBfZKv-dk7pEiLrfdk9wETazwUgyNdYfjg",
-                    authDomain: "tillomed-dcc.firebaseapp.com",
-                    databaseURL: "https://tillomed-dcc-default-rtdb.firebaseio.com",
-                    projectId: "tillomed-dcc",
-                    storageBucket: "tillomed-dcc.appspot.com",
-                    messagingSenderId: "388126075563",
-                    appId: "1:388126075563:web:81469208d5d7ebb854a5ee"
-                },
-                signin: {
-                    username: "tariq@sgslab.eu", 
-                    password: "R3p0rt1ng!"
-                },
-                issueCollector: "https://sgslab.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/1kwsvv/b/8/b0105d975e9e59f24a3230a22972a71a/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=71f0e95b"
-            };
             
 
-            AJS.$( async () => {
-                try {
-                    AJS.$('#container').html(htmlContent);
 
-                    AP.user.getCurrentUser(function(user) {
-                        if(adminAccounts.includes(user.atlassianAccountId)){
-                            $('#change').prop('disabled', false);
-                        }
-                    });
+                    AJS.$('#container').html('<b>Hello world</b>');
 
-                    
-                        AP.context.getContext( async (context_data) => { 
-
-                            const page_id = context_data.confluence.content.id;
-                            const spaceKey = context_data.confluence.space.key;
-
-                            AJS.$('#page_id').val(page_id);
-                            
-                            await renderPage(config, page_id, spaceKey, window )
-            
-                        });
-                    
-                } catch(error) {
-                    try{
-                        let json = $.parseJSON(msg);
-                        AJS.$('#result').html(`<b>Error:</b> ` + JSON.stringify( error, null, 2)) ;
-                    }
-                    catch(err){
-                        AJS.$('#result').html(`<b>Error:</b> ` +  error) ;
-                    } 
-                    
-                }            
-            });
 </script>
