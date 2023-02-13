@@ -20,6 +20,10 @@ function getToken(userCredentials){
         .catch( (error) => {throw error} );
 }
 
+function setStatus(propData){
+    $('#status').text(propData);
+}
+
 
 async function renderPage(config, page_id, spaceKey, window) {
 
@@ -109,4 +113,4 @@ function configIssueCollector(colloectorUrl, window, data) {
     });
 }
 
-export { renderPage };
+export { renderPage, setStatus };

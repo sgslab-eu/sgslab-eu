@@ -10,6 +10,12 @@ const htmlContent = `
             SGS Document Change Controller
         </p>
     </section>
+
+    <div class="page-section">
+        <h2>Document Status</h2>
+        <pre><code id="status" style="overflow: scroll;></code></pre>
+    </div>
+
     <div class="page-section">
         <h2>Document Detail</h2>
         <div class="change-box">
