@@ -12,11 +12,6 @@ const htmlContent = `
     </section>
 
     <div class="page-section">
-        <h2>Document Status</h2>
-        <pre><code id="status" style="overflow: scroll;></code></pre>
-    </div>
-
-    <div class="page-section">
         <h2>Document Detail</h2>
         <div class="change-box">
             <label for="page_id">PageId</label>
@@ -69,7 +64,12 @@ const htmlContent = `
         </div>
     </div>
 
+    <div class="page-section">
+        <h2>Document Status</h2>
+        <pre><code id="status" style="overflow: scroll;></code></pre>
+    </div>
 
+    
     <div class="page-section"  style="display: none">
         <h3>Current Login</h3>
         <pre><code id="user" style="overflow: scroll;></code></pre>
