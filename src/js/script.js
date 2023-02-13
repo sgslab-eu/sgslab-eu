@@ -21,7 +21,7 @@ function getToken(userCredentials){
 }
 
 function setStatus(propData){
-    $('#status').text(propData);
+    $('#status').text(JSON.stringify( propData, null, 2));
 }
 
 
