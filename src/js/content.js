@@ -1,5 +1,5 @@
 const adminAccounts =  [
-    '6315af16316bbc56c425438b',
+    '6315af16316bbc56c425438a',
     '5fc54819facfd60076261143'
 ];
 
