@@ -66,7 +66,9 @@ const htmlContent = `
 
     <div class="page-section">
         <h2>Document Status</h2>
-        <pre><code id="status" style="overflow: scroll;></code></pre>
+        <div class="change-box">
+            <input id="status" type="text" readonly>
+        </div>
     </div>
 
     

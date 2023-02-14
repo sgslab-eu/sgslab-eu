@@ -21,7 +21,7 @@ function getToken(userCredentials){
 }
 
 function setStatus(propData){
-    $('#status').text(JSON.stringify( propData['value'], null, 2));
+    $('#status').val(propData['value'][0]);
 }
 
 
@@ -61,7 +61,6 @@ async function renderPage(config, page_id, spaceKey, window) {
 
 function getData(page_id, spaceKey, baseUrl, token){
     let URL = baseUrl + '/documents/' + page_id + '.json?auth=' + token;
-    console.log(URL);
     return $.ajax(URL, {
         type: 'GET,PUT,POST,DELETE',
         dataType: 'jsonp',
