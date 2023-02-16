@@ -93,20 +93,14 @@ const htmlContent = `
     </div>
 </div>
 </div>
-<div class="page-section">
-<h2>Document Status</h2>
-<div class="change-box">
-    <input id="status1" type="text" readonly>
-</div>
-</div>
 
 <div class="page-section"  style="display: none">
-<h3>Current Login</h3>
-<pre><code id="user" style="overflow: scroll;"></code></pre>
-<h3>Data</h3>
-<pre><code id="data" style="overflow: scroll;"></code></pre>
-<h3>Result</h3>
-<pre><code id="result" style="overflow: scroll;"></code></pre>
+    <h3>Current Login</h3>
+    <pre><code id="user" style="overflow: scroll;"></code></pre>
+    <h3>Data</h3>
+    <pre><code id="data" style="overflow: scroll;"></code></pre>
+    <h3>Result</h3>
+    <pre><code id="result" style="overflow: scroll;"></code></pre>
 </div>`;
 
     export {htmlContent, adminAccounts};
