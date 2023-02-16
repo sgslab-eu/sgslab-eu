@@ -19,16 +19,18 @@ const htmlContent = `
             <input id="page_id" type="text" readonly>
         </div>
         <div class="six columns">
-            <label for="page_status">Page Status</label>
-            <input id="page_status" type="text" readonly>
+            <label for="status">Document Status</label>
+            <input id="status" type="text" readonly>
         </div>
     </div>
     <div class="row">
-        <div class="six columns">
+        <div class="twelve columns">
             <label for="product_name">Name of Product</label>
             <input id="product_name" type="text" readonly>
         </div>
-        <div class="six columns">
+    </div>
+    <div class="row">
+        <div class="twelve columns">
             <label for="desc">Description</label>
             <input id="desc" type="text" readonly>
         </div>
@@ -94,7 +96,7 @@ const htmlContent = `
 <div class="page-section">
 <h2>Document Status</h2>
 <div class="change-box">
-    <input id="status" type="text" readonly>
+    <input id="status1" type="text" readonly>
 </div>
 </div>
 
