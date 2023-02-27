@@ -88,10 +88,18 @@ const htmlContent = `
 <div class="change-box">
     <pre><code id="file_list" style="background-color:white; padding: 20px;"></code></pre>
     
-    <div style="width: 100%; display: flex; align-items: flex-end; flex-direction: column;">
-        <input id="change" class="button-primary" type="button" style="width: 180px;" value="Change Request" />
+    <div id="document_div" class="row">
+        <div class="twelve columns">
+            <label for="document">Select document to change</label>
+            <select id="document"  style="width: 100%;"/>
+        </div>
     </div>
-</div>
+
+    
+
+    <div id="change_div" style="width: 100%; display: flex; flex-direction: row;">
+            <input id="change" class="button-primary" type="button" style="display: flex; align-items: flex-end; width: 180px; margin-left: auto" value="Change Request" />
+    </div>
 </div>
 
 <div class="page-section"  style="display: none">

@@ -49,11 +49,22 @@ async function renderPage(config, page_id, spaceKey, window) {
     let s = '';
     let f = [];
     const downloadUrl = 'https://sgslab.atlassian.net/wiki/download/attachments/' + page_id
+    $('#document').append($('<option>', { value: 0, text: '---Select---'}));
+    let pending_changes = 0;
     for (let val of data['file_list']) {
-        s = `${s} <b>${val['type']}</b>: <a href="${downloadUrl}/${val['name']}">${val['name']}</a><br>`
+        s = `${s} <b>${val['type']}</b>: <a href="${downloadUrl}/${val['name']}">${val['name']}</a>`;
+        if(val['status']!=0){
+            s = `${s} <i>(Change Pending)</i>`;
+            pending_changes++;
+        }
+        else {
+            $('#document').append($('<option>', { value: val['name'], text: val['name'] }));
+        }
+        s = `${s}<br>`
         f.push(val['name']);
     }
     $('#file_list').html(s);
+    $('#status').val(pending_changes);
     data['file_names'] = f.toString();
 
     await configIssueCollector(config['issueCollector'], window, data);
@@ -90,7 +101,11 @@ function configIssueCollector(colloectorUrl, window, data) {
                 "triggerFunction": function(showCollectorDialog) {
                     jQuery("#change").click(function(e) {
                         e.preventDefault();
-                        showCollectorDialog();
+                        if($('#document').val()!=0){
+                            window.ATL_JQ_PAGE_PROPS.fieldValues.customfield_10200 =$('#document').val();
+                            showCollectorDialog();
+                        }
+                        
                     });
                 },
                 fieldValues: {
@@ -104,7 +119,6 @@ function configIssueCollector(colloectorUrl, window, data) {
                     customfield_10202 : data['ma_grant_date'],
                     customfield_10203 : data['ma_renewal_date'],
                     customfield_10208 : 'https://sgslab.atlassian.net/wiki/spaces/' + data['spaceKey'] + '/pages/' + data['page_id'],
-                    customfield_10200 : data['file_names']     
                 }
             }
         ,
