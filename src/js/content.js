@@ -19,7 +19,7 @@ const htmlContent = `
             <input id="page_id" type="text" readonly>
         </div>
         <div class="six columns">
-            <label for="status">Document Status</label>
+            <label for="status">Pending Changes</label>
             <input id="status" type="text" readonly>
         </div>
     </div>
