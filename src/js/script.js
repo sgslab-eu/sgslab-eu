@@ -103,6 +103,7 @@ function configIssueCollector(colloectorUrl, window, data) {
                         e.preventDefault();
                         if($('#document').val()!=0){
                             window.ATL_JQ_PAGE_PROPS.fieldValues.customfield_10200 =$('#document').val();
+                            $('#change').prop('disabled', true);
                             showCollectorDialog();
                         }
                         
